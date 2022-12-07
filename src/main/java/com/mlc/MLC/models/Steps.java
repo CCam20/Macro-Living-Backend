@@ -36,8 +36,8 @@ public class Steps {
     @JoinColumn(name = "recipe_id", referencedColumnName = "id")
     private Recipe recipe;
 
-    public Steps() {
-        this.step1 = "";
+    public Steps(String step1) {
+        this.step1 = step1;
         this.step2 = "";
         this.step3 = "";
         this.step4 = "";
@@ -49,7 +49,7 @@ public class Steps {
         this.step10 = "";
 //        this.recipe = new Recipe();
     }
-//    public Steps(){}
+    public Steps(){}
     public String getStep1() {
         return step1;
     }

@@ -1,6 +1,7 @@
 package com.mlc.MLC.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -31,6 +32,8 @@ public class Ingredient {
     private boolean isVegetarian;
     //Many ingredients can go into one recipe but dont need to go into all recipes
 //    @JsonIgnoreProperties({"ingredients"})
+
+
     @JsonBackReference
     @ManyToMany
 //    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
@@ -59,6 +62,8 @@ public class Ingredient {
         this.quantity = quantity;
         this.calories = calories;
     }
+
+
 
     private Ingredient(){}
 

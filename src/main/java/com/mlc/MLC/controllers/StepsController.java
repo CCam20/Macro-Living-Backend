@@ -1,7 +1,6 @@
 package com.mlc.MLC.controllers;
 
 
-import com.mlc.MLC.models.Recipe;
 import com.mlc.MLC.models.Steps;
 import com.mlc.MLC.repository.StepsRepository;
 import org.springframework.beans.factory.annotation.Autowired;

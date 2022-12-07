@@ -32,7 +32,7 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        User user = new User();
+        User user = new User(0);
         user.setCarbs(10);
         user.setCalories(12);
         user.setFat(13);
@@ -47,7 +47,7 @@ public class DataLoader implements ApplicationRunner {
         Ingredient cashews = new Ingredient("Cashews", 18, 27, 44, 3, true, true, "per 20", 125.0);
         ingredientRepository.save(cashews);
 
-        Steps bacSaladSteps = new Steps();
+        Steps bacSaladSteps = new Steps("");
         stepsRepository.save(bacSaladSteps);
 
         bacSaladSteps.setStep1("chop apple");

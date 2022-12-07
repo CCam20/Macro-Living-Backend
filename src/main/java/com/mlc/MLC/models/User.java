@@ -22,15 +22,15 @@ public class User {
     private double fibre;
     @Column(name = "calories")
     private double calories;
-    @JsonBackReference
+//    @JsonBackReference
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Recipe> favouriteRecipes;
-    @JsonBackReference
+//    @JsonBackReference
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Recipe> mealPlan;
 
-    public User() {
-        this.protein = 0;
+    public User(double protein) {
+        this.protein = protein;
         this.carbs = 0;
         this.fat = 0;
         this.fibre = 0;
@@ -39,6 +39,7 @@ public class User {
         this.mealPlan = new ArrayList<>();
     }
 
+    public User(){}
     public Long getId() {
         return id;
     }

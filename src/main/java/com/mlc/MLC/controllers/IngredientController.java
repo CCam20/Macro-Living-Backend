@@ -26,11 +26,18 @@ public class IngredientController {
         return new ResponseEntity<>(ingredientRepository.findById(id), HttpStatus.OK);
     }
 
-    @PostMapping(value = "/ingredients")
+    @PostMapping(value = "/ingredients" , consumes = {"application/json"})
     public ResponseEntity<Ingredient> postIngredient(@RequestBody Ingredient ingredient){
+        System.out.println(ingredient);
         ingredientRepository.save(ingredient);
         return new ResponseEntity<>(ingredient, HttpStatus.CREATED);
     }
+
+//    @PostMapping(value = "/pirates")
+//    public ResponseEntity<Pirate> postPirate(@RequestBody Pirate pirate){
+//        pirateRepository.save(pirate);
+//        return new ResponseEntity<>(pirate, HttpStatus.CREATED);
+//    }
 
     @DeleteMapping(value = "/ingredients/{id}")
     public ResponseEntity<Ingredient> deleteIngredient(@PathVariable Long id){
