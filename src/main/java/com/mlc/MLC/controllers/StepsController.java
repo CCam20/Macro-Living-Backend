@@ -16,26 +16,31 @@ public class StepsController {
     StepsRepository stepsRepository;
 
     @GetMapping(value="/steps")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<List<Steps>> getAllSteps(){
         return new ResponseEntity<>(stepsRepository.findAll(), HttpStatus.OK);
     }
     @GetMapping(value = "/steps/{id}")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity getStep(@PathVariable Long id){
         return new ResponseEntity<>(stepsRepository.findById(id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/steps")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<Steps> postStep(@RequestBody Steps steps){
         stepsRepository.save(steps);
         return new ResponseEntity<>(steps, HttpStatus.CREATED);
     }
 
     @DeleteMapping(value = "/steps/{id}")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<Steps> deleteStep(@PathVariable Long id){
         stepsRepository.deleteById(id);
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
     @PatchMapping(value = "/steps/{id}")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<Steps> updateStep(@RequestBody Steps steps){
         stepsRepository.save(steps);
         return new ResponseEntity<>(steps, HttpStatus.OK);

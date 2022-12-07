@@ -17,29 +17,36 @@ public class RecipeController {
     RecipeRepository recipeRepository;
 
     @GetMapping(value = "/recipes")
-    public ResponseEntity<List<Recipe>> getAllRecipes(){
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<List<Recipe>> getAllRecipes() {
         return new ResponseEntity<>(recipeRepository.findAll(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/recipes/{id}")
-    public ResponseEntity getRecipe(@PathVariable Long id){
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity getRecipe(@PathVariable Long id) {
         return new ResponseEntity<>(recipeRepository.findById(id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/recipes")
-    public ResponseEntity<Recipe> postRecipe(@RequestBody Recipe recipe){
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Recipe> postRecipe(@RequestBody Recipe recipe) {
         recipeRepository.save(recipe);
         return new ResponseEntity<>(recipe, HttpStatus.CREATED);
     }
 
     @DeleteMapping(value = "/recipes/{id}")
-    public ResponseEntity<Recipe> deleteRecipe(@PathVariable Long id){
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Recipe> deleteRecipe(@PathVariable Long id) {
         recipeRepository.deleteById(id);
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
+
     @PatchMapping(value = "/recipes/{id}")
-    public ResponseEntity<Recipe> updateRecipe(@RequestBody Recipe recipe){
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Recipe> updateRecipe(@RequestBody Recipe recipe) {
         recipeRepository.save(recipe);
         return new ResponseEntity<>(recipe, HttpStatus.OK);
     }
 }
+
