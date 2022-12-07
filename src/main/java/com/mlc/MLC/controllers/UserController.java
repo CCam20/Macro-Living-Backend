@@ -1,12 +1,12 @@
 package com.mlc.MLC.controllers;
 
+import com.mlc.MLC.models.Steps;
 import com.mlc.MLC.models.User;
 import com.mlc.MLC.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,5 +18,26 @@ public class UserController {
     @GetMapping(value = "/users")
     public ResponseEntity<List<User>> getAllUsers(){
         return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
+    }
+    @GetMapping(value = "/users/{id}")
+    public ResponseEntity getStep(@PathVariable Long id){
+        return new ResponseEntity<>(userRepository.findById(id), HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/users")
+    public ResponseEntity<User> postStep(@RequestBody User user){
+        userRepository.save(user);
+        return new ResponseEntity<>(user, HttpStatus.CREATED);
+    }
+
+    @DeleteMapping(value = "/users/{id}")
+    public ResponseEntity<User> deleteStep(@PathVariable Long id){
+        userRepository.deleteById(id);
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+    @PatchMapping(value = "/users/{id}")
+    public ResponseEntity<User> updateStep(@RequestBody User user){
+        userRepository.save(user);
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }
