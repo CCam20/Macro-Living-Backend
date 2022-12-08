@@ -29,12 +29,12 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Recipe> mealPlan;
 
-    public User(double protein) {
+    public User(double protein, double carbs, double fat, double fibre, double calories) {
         this.protein = protein;
-        this.carbs = 0;
-        this.fat = 0;
-        this.fibre = 0;
-        this.calories = 0;
+        this.carbs = carbs;
+        this.fat = fat;
+        this.fibre = fibre;
+        this.calories = calories;
         this.favouriteRecipes = new ArrayList<>();
         this.mealPlan = new ArrayList<>();
     }

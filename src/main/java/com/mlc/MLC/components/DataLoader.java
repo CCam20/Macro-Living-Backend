@@ -32,7 +32,7 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        User user = new User(0);
+        User user = new User(0,0,0,0,0);
         user.setCarbs(10);
         user.setCalories(12);
         user.setFat(13);
