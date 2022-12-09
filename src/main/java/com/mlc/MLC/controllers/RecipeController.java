@@ -43,7 +43,6 @@ public class RecipeController {
     }
 
     @PatchMapping(value = "/recipes/{id}")
-    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<Recipe> updateRecipe(@RequestBody Recipe recipe) {
         recipeRepository.save(recipe);
         return new ResponseEntity<>(recipe, HttpStatus.OK);
