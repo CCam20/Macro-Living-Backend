@@ -90,6 +90,65 @@ public class DataLoader implements ApplicationRunner {
         recipeRepository.save(portobelloMushroomAndSquashRisotto);
 
 
+        //Vegan Chickpea Frittata
+
+        Ingredient cauliflower = new Ingredient("Cauliflower", 2, 5, 0, 2, true, true, "per 100g", 25.00);
+        ingredientRepository.save(cauliflower);
+        Ingredient spinach = new Ingredient("Spinach", 1.6, 2.4, 0.4, 1.2, true, true, "per 60g", 14.0);
+        ingredientRepository.save(spinach);
+        Ingredient chickpeaFlour = new Ingredient("Chickpea Flour", 32.3, 72.2, 6.9, 11.1, true, true, "per 140g", 501.1);
+        ingredientRepository.save(chickpeaFlour);
+
+        Steps veganChickpeaFrittataSteps = new Steps("Preheat oven to 190oC and use 1 tsp of olive oil to grease a round baking tin");
+        veganChickpeaFrittataSteps.setStep2("Place a large saute pan over medium-high heat, coat with remaining olive oil and add the diced onion and chopped cauliflower.");
+        veganChickpeaFrittataSteps.setStep3("Stir, reducing the heat to medium when it starts to sizzle. When the cauliflower is tender, about 4 minutes, remove from the heat and stir in the spinach and salt. Let it stand as the spinach wilts.");
+        veganChickpeaFrittataSteps.setStep4("In a medium bowl, whisk the chickpea flour, pepper and 1 1/2 cups (375ml) water. Stir the cooked vegetables into the chickpea mixture, then pour into the prepared pie pan. Smooth the top.");
+        veganChickpeaFrittataSteps.setStep5("Bake for 45 minutes, until the top is cracked and feels firm when pressed. Let cool for 5 minutes on a rack before slicing in 6 pieces.");
+        stepsRepository.save(veganChickpeaFrittataSteps);
+
+        Recipe veganChickpeaFrittata = new Recipe("Vegan Chickpea Frittata", veganChickpeaFrittataSteps);
+        recipeRepository.save(veganChickpeaFrittata);
+        veganChickpeaFrittata.addIngredient(oliveOil);
+        veganChickpeaFrittata.addIngredient(onion);
+        veganChickpeaFrittata.addIngredient(cauliflower);
+        veganChickpeaFrittata.addIngredient(spinach);
+        veganChickpeaFrittata.addIngredient(chickpeaFlour);
+        recipeRepository.save(veganChickpeaFrittata);
+
+        //Mushroom and Kale Pasta
+
+        Ingredient garlic = new Ingredient("Garlic", 0.6, 3, 0, 0.2, true, true, "per 3 cloves", 13.0);
+        ingredientRepository.save(garlic);
+        Ingredient penne = new Ingredient("Penne", 12.3, 74, 1.8, 3.5, false, true, "per 100g", 353.0);
+        ingredientRepository.save(penne);
+        Ingredient kale = new Ingredient("Kale", 4.7, 9.3, 0, 4.7, true, true, "per 100g", 47.0);
+        ingredientRepository.save(kale);
+        Ingredient boursin = new Ingredient("Boursin Cheese", 3.4, 1.7, 20.7, 0, false, true, "per 50g", 207.0);
+        ingredientRepository.save(boursin);
+
+        Steps mushroomAndKalePastaSteps = new Steps("Put the oil in the pot,When the oil is hot, add the mushrooms, onions and salt, and cook, stirring frequently, until mushrooms begin to release their juices, 5 minutes.");
+        mushroomAndKalePastaSteps.setStep2("Add the garlic and cook until fragrant, 30 seconds.");
+        mushroomAndKalePastaSteps.setStep3("Add the pasta to a pot of boiling salted water and cook for 10-12 minutes");
+        mushroomAndKalePastaSteps.setStep4("Drain the pasta but keep 1/4 cup of the water. Add the water and kale to the mushroom pan and let it soften for a few minutes");
+        mushroomAndKalePastaSteps.setStep5("Take the pan off the heat an stir in the cheese till combined. add the sauce to your pasta and enjoy!");
+        stepsRepository.save(mushroomAndKalePastaSteps);
+
+        Recipe mushroomAndKalePasta = new Recipe("Mushroom and Kale Pasta", mushroomAndKalePastaSteps);
+        recipeRepository.save(mushroomAndKalePasta);
+        mushroomAndKalePasta.addIngredient(oliveOil);
+        mushroomAndKalePasta.addIngredient(portobelloMushroom);
+        mushroomAndKalePasta.addIngredient(onion);
+        mushroomAndKalePasta.addIngredient(garlic);
+        mushroomAndKalePasta.addIngredient(penne);
+        mushroomAndKalePasta.addIngredient(kale);
+        mushroomAndKalePasta.addIngredient(boursin);
+        recipeRepository.save(mushroomAndKalePasta);
+
+        
+
+
+
+
 
 
     }
