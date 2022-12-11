@@ -72,8 +72,10 @@ public class DataLoader implements ApplicationRunner {
         Ingredient parmesanCheese = new Ingredient("ParmesanCheese", 14.4, 1.5, 10.7, 0, false, false, "Per 40g",162.0);
         ingredientRepository.save(parmesanCheese);
         Ingredient portobelloMushroom = new Ingredient("Portobello Mushroom",2,4,0.5,1.3,true,true, "Per large mushroom", 22.0);
+        ingredientRepository.save(portobelloMushroom);
 
         Steps portobelloMushroomAndSquashRisottoSteps = new Steps("Prepare Mushrooms");
+        stepsRepository.save(portobelloMushroomAndSquashRisottoSteps);
         portobelloMushroomAndSquashRisottoSteps.setStep2("In a large pot add two teaspoons of olive oil");
         portobelloMushroomAndSquashRisottoSteps.setStep3("Add the onions to the pot");
         stepsRepository.save(portobelloMushroomAndSquashRisottoSteps);
@@ -87,6 +89,7 @@ public class DataLoader implements ApplicationRunner {
         portobelloMushroomAndSquashRisotto.addIngredient(whiteWine);
         portobelloMushroomAndSquashRisotto.addIngredient(vegetableStockCube);
         portobelloMushroomAndSquashRisotto.addIngredient(parmesanCheese);
+        portobelloMushroomAndSquashRisotto.addIngredient(portobelloMushroom);
         recipeRepository.save(portobelloMushroomAndSquashRisotto);
 
 
@@ -100,6 +103,7 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(chickpeaFlour);
 
         Steps veganChickpeaFrittataSteps = new Steps("Preheat oven to 190oC and use 1 tsp of olive oil to grease a round baking tin");
+        stepsRepository.save(veganChickpeaFrittataSteps);
         veganChickpeaFrittataSteps.setStep2("Place a large saute pan over medium-high heat, coat with remaining olive oil and add the diced onion and chopped cauliflower.");
         veganChickpeaFrittataSteps.setStep3("Stir, reducing the heat to medium when it starts to sizzle. When the cauliflower is tender, about 4 minutes, remove from the heat and stir in the spinach and salt. Let it stand as the spinach wilts.");
         veganChickpeaFrittataSteps.setStep4("In a medium bowl, whisk the chickpea flour, pepper and 1 1/2 cups (375ml) water. Stir the cooked vegetables into the chickpea mixture, then pour into the prepared pie pan. Smooth the top.");
@@ -127,6 +131,7 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(boursin);
 
         Steps mushroomAndKalePastaSteps = new Steps("Put the oil in the pot,When the oil is hot, add the mushrooms, onions and salt, and cook, stirring frequently, until mushrooms begin to release their juices, 5 minutes.");
+        stepsRepository.save(mushroomAndKalePastaSteps);
         mushroomAndKalePastaSteps.setStep2("Add the garlic and cook until fragrant, 30 seconds.");
         mushroomAndKalePastaSteps.setStep3("Add the pasta to a pot of boiling salted water and cook for 10-12 minutes");
         mushroomAndKalePastaSteps.setStep4("Drain the pasta but keep 1/4 cup of the water. Add the water and kale to the mushroom pan and let it soften for a few minutes");
@@ -146,11 +151,15 @@ public class DataLoader implements ApplicationRunner {
 
         // Banana PB oats
 
-        Ingredient oats = new Ingredient("Oats", 6, 29.5, 3.9,4.5, true, true, "per 45g", 186);
-        Ingredient peanutButter = new Ingredient("Peanut Butter", 3, 0.8, 6, 0.7, true, true, "per 15g", 71);
-        Ingredient banana = new Ingredient("Banana", 1, 21.6, 0.3, 2.5, true, true, "per one banana", 84);
+        Ingredient oats = new Ingredient("Oats", 6, 29.5, 3.9,4.5, true, true, "per 45g", 186.0);
+        ingredientRepository.save(oats);
+        Ingredient peanutButter = new Ingredient("Peanut Butter", 3, 0.8, 6, 0.7, true, true, "per 15g", 71.0);
+        ingredientRepository.save(peanutButter);
+        Ingredient banana = new Ingredient("Banana", 1, 21.6, 0.3, 2.5, true, true, "per one banana", 84.0);
+        ingredientRepository.save(banana);
 
         Steps bananaPbOatsSteps = new Steps("Put oats and 135ml water in a pan and heat gradually");
+        stepsRepository.save(bananaPbOatsSteps);
         bananaPbOatsSteps.setStep2("stir occasionally while oats thicken");
         bananaPbOatsSteps.setStep3("Once its bubbling - remove from the heat and por into a bowl");
         bananaPbOatsSteps.setStep4("Add a tbs of peanut butter and chopped banana");
@@ -165,11 +174,15 @@ public class DataLoader implements ApplicationRunner {
 
         //Peanut Butter Breakfast Cookies
 
-        Ingredient egg = new Ingredient("Egg", 6.3, 0.4, 4.8, 0, false, true, "per 1 egg", 72);
-        Ingredient honey = new Ingredient("Honey", 0.2, 51.9, 0, 0.1, false, true, "per 3 tbs", 192);
+        Ingredient egg = new Ingredient("Egg", 6.3, 0.4, 4.8, 0, false, true, "per 1 egg", 72.0);
+        ingredientRepository.save(egg);
+        Ingredient honey = new Ingredient("Honey", 0.2, 51.9, 0, 0.1, false, true, "per 3 tbs", 192.0);
+        ingredientRepository.save(honey);
         Ingredient cinnamon = new Ingredient("Cinnamon", 0, 0, 0, 0, true, true, "per 2tsp", 0.0);
+        ingredientRepository.save(cinnamon);
 
         Steps pbBreakfastCookiesSteps = new Steps("Preheat the oven to 350°F. Spray a cookie sheet with cooking spray.");
+        stepsRepository.save(pbBreakfastCookiesSteps);
         pbBreakfastCookiesSteps.setStep2("Add the ripe bananas and eggs into a medium mixing bowl. Mix with a spatula, mashing on the banana to get chunks as small as possible.");
         pbBreakfastCookiesSteps.setStep3("Add the oats, peanut butter, honey, and salt, and stir until just combined. The mixture will get thick and hard to stir.");
         pbBreakfastCookiesSteps.setStep4("Use a 1/4 cup measure to portion cookie dough into 12 balls. Take each ball and split it in half to create 24 smaller balls. Roll each ball and lightly smash it between your palms to create a mini cookie.");
