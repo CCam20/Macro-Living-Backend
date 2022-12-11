@@ -144,7 +144,48 @@ public class DataLoader implements ApplicationRunner {
         mushroomAndKalePasta.addIngredient(boursin);
         recipeRepository.save(mushroomAndKalePasta);
 
-        
+        // Banana PB oats
+
+        Ingredient oats = new Ingredient("Oats", 6, 29.5, 3.9,4.5, true, true, "per 45g", 186);
+        Ingredient peanutButter = new Ingredient("Peanut Butter", 3, 0.8, 6, 0.7, true, true, "per 15g", 71);
+        Ingredient banana = new Ingredient("Banana", 1, 21.6, 0.3, 2.5, true, true, "per one banana", 84);
+
+        Steps bananaPbOatsSteps = new Steps("Put oats and 135ml water in a pan and heat gradually");
+        bananaPbOatsSteps.setStep2("stir occasionally while oats thicken");
+        bananaPbOatsSteps.setStep3("Once its bubbling - remove from the heat and por into a bowl");
+        bananaPbOatsSteps.setStep4("Add a tbs of peanut butter and chopped banana");
+        stepsRepository.save(bananaPbOatsSteps);
+
+        Recipe bananaPbOats = new Recipe("Banana and Peanut Butter Oats", bananaPbOatsSteps);
+        recipeRepository.save(bananaPbOats);
+        bananaPbOats.addIngredient(oats);
+        bananaPbOats.addIngredient(banana);
+        bananaPbOats.addIngredient(peanutButter);
+        recipeRepository.save(bananaPbOats);
+
+        //Peanut Butter Breakfast Cookies
+
+        Ingredient egg = new Ingredient("Egg", 6.3, 0.4, 4.8, 0, false, true, "per 1 egg", 72);
+        Ingredient honey = new Ingredient("Honey", 0.2, 51.9, 0, 0.1, false, true, "per 3 tbs", 192);
+        Ingredient cinnamon = new Ingredient("Cinnamon", 0, 0, 0, 0, true, true, "per 2tsp", 0.0);
+
+        Steps pbBreakfastCookiesSteps = new Steps("Preheat the oven to 350°F. Spray a cookie sheet with cooking spray.");
+        pbBreakfastCookiesSteps.setStep2("Add the ripe bananas and eggs into a medium mixing bowl. Mix with a spatula, mashing on the banana to get chunks as small as possible.");
+        pbBreakfastCookiesSteps.setStep3("Add the oats, peanut butter, honey, and salt, and stir until just combined. The mixture will get thick and hard to stir.");
+        pbBreakfastCookiesSteps.setStep4("Use a 1/4 cup measure to portion cookie dough into 12 balls. Take each ball and split it in half to create 24 smaller balls. Roll each ball and lightly smash it between your palms to create a mini cookie.");
+        pbBreakfastCookiesSteps.setStep5("Place the cookies on the baking sheet. Bake until the edges start to brown, 12 to 15 minutes.");
+        stepsRepository.save(pbBreakfastCookiesSteps);
+
+        Recipe pbBreakfastCookies = new Recipe("Peanut Butter Breakfast Cookies", pbBreakfastCookiesSteps);
+        recipeRepository.save(pbBreakfastCookies);
+        pbBreakfastCookies.addIngredient(banana);
+        pbBreakfastCookies.addIngredient(egg);
+        pbBreakfastCookies.addIngredient(oats);
+        pbBreakfastCookies.addIngredient(peanutButter);
+        pbBreakfastCookies.addIngredient(honey);
+        pbBreakfastCookies.addIngredient(cinnamon);
+        recipeRepository.save(pbBreakfastCookies);
+
 
 
 
