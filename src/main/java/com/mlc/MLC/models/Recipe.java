@@ -35,6 +35,8 @@ public class Recipe {
     private Steps steps;
     @Column(name = "favourite")
     private boolean favourite;
+    @Column(name = "mealPlan")
+    private  boolean mealPlan;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="user_id")
     private User user;
@@ -44,6 +46,7 @@ public class Recipe {
         this.ingredients = new ArrayList<>();
         this.steps = steps;
         this.favourite = false;
+        this.mealPlan = false;
     }
 
     public Recipe(){}
@@ -161,5 +164,13 @@ public class Recipe {
 
     public void setSteps(Steps steps) {
         this.steps = steps;
+    }
+
+    public boolean isMealPlan() {
+        return mealPlan;
+    }
+
+    public void setMealPlan(boolean mealPlan) {
+        this.mealPlan = mealPlan;
     }
 }
