@@ -38,9 +38,9 @@ public class DataLoader implements ApplicationRunner {
         userRepository.save(user1);
 
         // BACsalad data (NOT FINAL)
-        Ingredient bacon = new Ingredient("Bacon",37, 0,41,0,false,false, "2 slices", 200.0);
+        Ingredient bacon = new Ingredient("Bacon",37, 0,41,0,false,false, "2 slices of", 200.0);
         ingredientRepository.save(bacon);
-        Ingredient apple = new Ingredient("Apple", 0, 13, 0 , 2, true, true , "One apple", 75.0);
+        Ingredient apple = new Ingredient("Apple", 0, 13, 0 , 2, true, true , "1", 75.0);
         ingredientRepository.save(apple);
         Ingredient cashews = new Ingredient("Cashews", 18, 27, 44, 3, true, true, "20g", 125.0);
         ingredientRepository.save(cashews);
@@ -59,21 +59,21 @@ public class DataLoader implements ApplicationRunner {
         recipeRepository.save(bacSalad);
 
         //Portobello Mushroom And Squash Risotto data(NOT FINAL)
-        Ingredient onion = new Ingredient("Onion", 1, 8, 0, 2, true, true, "1 medium onion", 44.0);
+        Ingredient onion = new Ingredient("Onion", 0.5, 4, 0, 1, true, true, "1/2 medium", 22.0);
         ingredientRepository.save(onion);
-        Ingredient oliveOil = new Ingredient("Olive Oil", 0,0,14,0, true, true, "1tbs", 120.0);
+        Ingredient oliveOil = new Ingredient("Olive Oil", 0,0,7,0, true, true, "1/2 tbs", 60.0);
         ingredientRepository.save(oliveOil);
-        Ingredient squash = new Ingredient("Squash",5.5,36,0.6,2.8, true, true, "1 medium squash",143.0);
+        Ingredient squash = new Ingredient("Squash",3,18,0.3,1.4, true, true, "1/2 medium",71.0);
         ingredientRepository.save(squash);
-        Ingredient risottoRice = new Ingredient("Risotto Rice",11,117,1,0,true,true,"150g",524.0);
+        Ingredient risottoRice = new Ingredient("Risotto Rice",5.5,58.5,0.5,0,true,true,"75g",262.0);
         ingredientRepository.save(risottoRice);
-        Ingredient whiteWine = new Ingredient("White Wine",0,1.6,0,0, true,true,"60ml",49.0);
+        Ingredient whiteWine = new Ingredient("White Wine",0,0.8,0,0, true,true,"30ml",25.0);
         ingredientRepository.save(whiteWine);
-        Ingredient vegetableStockCube = new Ingredient("Vegetable Stock",0.6, 3,2,0.4,true,true,"Stock cube",31.0);
+        Ingredient vegetableStockCube = new Ingredient("Vegetable Stock",0.3, 1.5,1,0.2,true,true,"1 cube",15.0);
         ingredientRepository.save(vegetableStockCube);
-        Ingredient parmesanCheese = new Ingredient("ParmesanCheese", 14.4, 1.5, 10.7, 0, false, false, "40g",162.0);
+        Ingredient parmesanCheese = new Ingredient("ParmesanCheese", 7.2, .75, 5.5, 0, false, false, "20g",81.0);
         ingredientRepository.save(parmesanCheese);
-        Ingredient portobelloMushroom = new Ingredient("Portobello Mushroom",2,4,0.5,1.3,true,true, "large mushroom", 22.0);
+        Ingredient portobelloMushroom = new Ingredient("Portobello Mushroom",1,2,0.2,0.7,true,true, "large", 11.0);
         ingredientRepository.save(portobelloMushroom);
 
         Steps portobelloMushroomAndSquashRisottoSteps = new Steps("Prepare Mushrooms");
@@ -101,7 +101,7 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(cauliflower);
         Ingredient spinach = new Ingredient("Spinach", 1.6, 2.4, 0.4, 1.2, true, true, "60g", 14.0);
         ingredientRepository.save(spinach);
-        Ingredient chickpeaFlour = new Ingredient("Chickpea Flour", 32.3, 72.2, 6.9, 11.1, true, true, "140g", 501.1);
+        Ingredient chickpeaFlour = new Ingredient("Chickpea Flour", 16, 36.1, 3.5, 5.5, true, true, "70g", 250.0);
         ingredientRepository.save(chickpeaFlour);
 
         Steps veganChickpeaFrittataSteps = new Steps("Preheat oven to 190oC and use 1 tsp of olive oil to grease a round baking tin");
@@ -123,13 +123,13 @@ public class DataLoader implements ApplicationRunner {
 
         //Mushroom and Kale Pasta
 
-        Ingredient garlic = new Ingredient("Garlic", 0.6, 3, 0, 0.2, true, true, "3 cloves", 13.0);
+        Ingredient garlic = new Ingredient("Garlic", 0.1, 1, 0, 0, true, true, "1 clove", 4.0);
         ingredientRepository.save(garlic);
-        Ingredient penne = new Ingredient("Penne", 12.3, 74, 1.8, 3.5, false, true, "100g", 353.0);
+        Ingredient penne = new Ingredient("Penne", 6, 37, 1, 1.75, false, true, "50g", 176.0);
         ingredientRepository.save(penne);
-        Ingredient kale = new Ingredient("Kale", 4.7, 9.3, 0, 4.7, true, true, "100g", 47.0);
+        Ingredient kale = new Ingredient("Kale", 2.3, 4.6, 0, 2.3, true, true, "50g", 23.0);
         ingredientRepository.save(kale);
-        Ingredient boursin = new Ingredient("Boursin Cheese", 3.4, 1.7, 20.7, 0, false, true, "50g", 207.0);
+        Ingredient boursin = new Ingredient("Boursin Cheese", 1.7, 0.8, 10.3, 0, false, true, "25g", 53.0);
         ingredientRepository.save(boursin);
 
         Steps mushroomAndKalePastaSteps = new Steps("Put the oil in the pot,When the oil is hot, add the mushrooms, onions and salt, and cook, stirring frequently, until mushrooms begin to release their juices, 5 minutes.");
@@ -157,7 +157,7 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(oats);
         Ingredient peanutButter = new Ingredient("Peanut Butter", 3, 0.8, 6, 0.7, true, true, "15g", 71.0);
         ingredientRepository.save(peanutButter);
-        Ingredient banana = new Ingredient("Banana", 1, 21.6, 0.3, 2.5, true, true, "one banana", 84.0);
+        Ingredient banana = new Ingredient("Banana", 1, 21.6, 0.3, 2.5, true, true, "1", 84.0);
         ingredientRepository.save(banana);
 
         Steps bananaPbOatsSteps = new Steps("Put oats and 135ml water in a pan and heat gradually");
@@ -176,11 +176,11 @@ public class DataLoader implements ApplicationRunner {
 
         //Peanut Butter Breakfast Cookies
 
-        Ingredient egg = new Ingredient("Egg", 6.3, 0.4, 4.8, 0, false, true, "1 egg", 72.0);
+        Ingredient egg = new Ingredient("Egg", 6.3, 0.4, 4.8, 0, false, true, "1", 72.0);
         ingredientRepository.save(egg);
-        Ingredient honey = new Ingredient("Honey", 0.2, 51.9, 0, 0.1, false, true, "3 tbs", 192.0);
+        Ingredient honey = new Ingredient("Honey", 0.1, 17.3, 0, 0, false, true, "1 tbs", 64.0);
         ingredientRepository.save(honey);
-        Ingredient cinnamon = new Ingredient("Cinnamon", 0, 0, 0, 0, true, true, "2tsp", 0.0);
+        Ingredient cinnamon = new Ingredient("Cinnamon", 0, 0, 0, 0, true, true, "1tsp", 0.0);
         ingredientRepository.save(cinnamon);
 
         Steps pbBreakfastCookiesSteps = new Steps("Preheat the oven to 350°F. Spray a cookie sheet with cooking spray.");
@@ -205,19 +205,19 @@ public class DataLoader implements ApplicationRunner {
 
         Ingredient tamari = new Ingredient("Tamari Sauce", 1, 1, 0, 0, true, true, "1 tbs", 5.0);
         ingredientRepository.save(tamari);
-        Ingredient curryPowder = new Ingredient("Curry Powder", 0.9, 3.5, 0.9, 3.4, true, true, "1 tbs", 20.0);
+        Ingredient curryPowder = new Ingredient("Curry Powder", 0.5, 1.7, 0.5, 1.7, true, true, "1 tsp", 10.0);
         ingredientRepository.save(curryPowder);
-        Ingredient groundCumin = new Ingredient("Ground Cumin", 0, 1, 0, 0, true, true, "1tsp", 10.0);
+        Ingredient groundCumin = new Ingredient("Ground Cumin", 0, 1, 0, 0, true, true, "1 tsp", 10.0);
         ingredientRepository.save(groundCumin);
-        Ingredient chickenBreast = new Ingredient("Chicken Breast", 72, 0, 3.3, 0, false, false, "300g", 318.0);
+        Ingredient chickenBreast = new Ingredient("Chicken Breast", 36, 0, 1.6, 0, false, false, "150g", 159.0);
         ingredientRepository.save(chickenBreast);
         Ingredient limeJuice = new Ingredient("Lime Juice", 0, 0, 0, 0, true, true, "1tbs", 1.0);
         ingredientRepository.save(limeJuice);
-        Ingredient littleGemLettuce = new Ingredient("Little Gem Lettuce", 0.8, 1.7, 0.5, 1.7, true, true, "2 hearts", 16.0);
+        Ingredient littleGemLettuce = new Ingredient("Little Gem Lettuce", 0.4, 0.8, 0.2, 0.8, true, true, "1 heart", 8.0);
         ingredientRepository.save(littleGemLettuce);
-        Ingredient cucumber = new Ingredient("Cucumber", 0.5, 2.5, 0.1, 0.3, true, true, "1/4 cucumber", 10.0);
+        Ingredient cucumber = new Ingredient("Cucumber", 0.5, 2.5, 0.1, 0.3, true, true, "1/4", 10.0);
         ingredientRepository.save(cucumber);
-        Ingredient pomegranate = new Ingredient("Pomegranate", 1, 18, 1, 4, true, true, "1/2 pomegranate", 80.0);
+        Ingredient pomegranate = new Ingredient("Pomegranate", 0.5, 9, 0.5, 2, true, true, "1/4", 40.0);
         ingredientRepository.save(pomegranate);
         Ingredient chilliSauce = new Ingredient("Chilli Sauce", 0.3, 14.3, 0.2, 0, true, true, "1tbs", 59.0);
         ingredientRepository.save(chilliSauce);
@@ -252,11 +252,11 @@ public class DataLoader implements ApplicationRunner {
 
         Ingredient avocado = new Ingredient("Avocado", 1.4, 6, 10.3, 4.7, true, true, "1/2", 112.0);
         ingredientRepository.save(avocado);
-        Ingredient strawberries = new Ingredient("Strawberries", 0, 9, 1.7, 1.7, true, true, "150g", 45.0);
+        Ingredient strawberries = new Ingredient("Strawberries", 0, 4.2, 0.8, 0.8, true, true, "70g", 21.0);
         ingredientRepository.save(strawberries);
-        Ingredient yoghurt = new Ingredient("Yoghurt", 5.2, 1.5, 0, 0, false, true, "50g", 27.0);
+        Ingredient yoghurt = new Ingredient("Yoghurt", 2.6, 0.7, 0, 0, false, true, "25g", 13.0);
         ingredientRepository.save(yoghurt);
-        Ingredient skimmedMilk = new Ingredient("Skimmed Milk", 7.2, 9.6, 3.4, 0, false, true, "200ml", 98.0);
+        Ingredient skimmedMilk = new Ingredient("Skimmed Milk", 5.4, 7.2, 2.6, 0, false, true, "150ml", 74.0);
         ingredientRepository.save(skimmedMilk);
 
         Steps avocadoAndStrawberrySmoothieSteps = new Steps("Put all the ingredients into a blender and whizz until smooth. If teh consistency is too thick, add a little water");
@@ -284,7 +284,7 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(kingPrawns);
         Ingredient harissaPaste = new Ingredient("Harissa Paste", 0, 0.4, 0.3, 0, true, true, "1tsp", 4.0);
         ingredientRepository.save(harissaPaste);
-        Ingredient lemonZest = new Ingredient("Lemon Zest", 0, 0, 0, 0, true, true, "zest of 1/2 a lemon", 0.0);
+        Ingredient lemonZest = new Ingredient("Lemon Zest", 0, 0, 0, 0, true, true, "1/2 a lemon", 0.0);
         ingredientRepository.save(lemonZest);
 
         Steps prawnAndHarissaSpaghettiSteps = new Steps("Bring a pan of salted water to the boil. Add the broccoli and boil for 1 min, or until tender. Drain and set aside. Cook the pasta following the pack instructions, then drain, reserving a ladleful of cooking water");
