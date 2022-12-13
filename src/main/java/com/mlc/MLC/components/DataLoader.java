@@ -50,7 +50,7 @@ public class DataLoader implements ApplicationRunner {
         bacSaladSteps.setStep1("Chop apple");
         stepsRepository.save(bacSaladSteps);
 
-        Recipe bacSalad = new Recipe("BAC Salad", bacSaladSteps);
+        Recipe bacSalad = new Recipe("BAC Salad", bacSaladSteps, "https://www.recipegirl.com/wp-content/uploads/2007/11/Apple-Bacon-Salad-Recipe.jpg");
         recipeRepository.save(bacSalad);
 
         bacSalad.addIngredient(bacon);
@@ -82,7 +82,7 @@ public class DataLoader implements ApplicationRunner {
         portobelloMushroomAndSquashRisottoSteps.setStep3("Add the onions to the pot");
         stepsRepository.save(portobelloMushroomAndSquashRisottoSteps);
 
-        Recipe portobelloMushroomAndSquashRisotto = new Recipe("Portobello Mushroom And Squash Risotto", portobelloMushroomAndSquashRisottoSteps);
+        Recipe portobelloMushroomAndSquashRisotto = new Recipe("Portobello Mushroom And Squash Risotto", portobelloMushroomAndSquashRisottoSteps, "https://blog.myfitnesspal.com/wp-content/uploads/2018/08/Seared-Portobello-Mushroom-and-Squash-Barley-Risotto.jpg");
         recipeRepository.save(portobelloMushroomAndSquashRisotto);
         portobelloMushroomAndSquashRisotto.addIngredient(onion);
         portobelloMushroomAndSquashRisotto.addIngredient(oliveOil);
@@ -112,7 +112,7 @@ public class DataLoader implements ApplicationRunner {
         veganChickpeaFrittataSteps.setStep5("Bake for 45 minutes, until the top is cracked and feels firm when pressed. Let cool for 5 minutes on a rack before slicing in 6 pieces.");
         stepsRepository.save(veganChickpeaFrittataSteps);
 
-        Recipe veganChickpeaFrittata = new Recipe("Vegan Chickpea Frittata", veganChickpeaFrittataSteps);
+        Recipe veganChickpeaFrittata = new Recipe("Vegan Chickpea Frittata", veganChickpeaFrittataSteps, "https://blog.myfitnesspal.com/wp-content/uploads/2019/11/Vegan-Chickpea-Frittata-752x472.jpg");
         recipeRepository.save(veganChickpeaFrittata);
         veganChickpeaFrittata.addIngredient(oliveOil);
         veganChickpeaFrittata.addIngredient(onion);
@@ -140,7 +140,7 @@ public class DataLoader implements ApplicationRunner {
         mushroomAndKalePastaSteps.setStep5("Take the pan off the heat an stir in the cheese till combined. add the sauce to your pasta and enjoy!");
         stepsRepository.save(mushroomAndKalePastaSteps);
 
-        Recipe mushroomAndKalePasta = new Recipe("Mushroom and Kale Pasta", mushroomAndKalePastaSteps);
+        Recipe mushroomAndKalePasta = new Recipe("Mushroom and Kale Pasta", mushroomAndKalePastaSteps, "https://skinnyspatula.com/wp-content/uploads/2020/12/Mushroom_Parmesan_Kale_Pasta4-792x1024.jpg.webp");
         recipeRepository.save(mushroomAndKalePasta);
         mushroomAndKalePasta.addIngredient(oliveOil);
         mushroomAndKalePasta.addIngredient(portobelloMushroom);
@@ -167,7 +167,7 @@ public class DataLoader implements ApplicationRunner {
         bananaPbOatsSteps.setStep4("Add a tbs of peanut butter and chopped banana");
         stepsRepository.save(bananaPbOatsSteps);
 
-        Recipe bananaPbOats = new Recipe("Banana and Peanut Butter Oats", bananaPbOatsSteps);
+        Recipe bananaPbOats = new Recipe("Banana and Peanut Butter Oats", bananaPbOatsSteps, "https://www.spoonfulofflavor.com/wp-content/uploads/2021/10/peanut-butter-banana-oatmeal-recipe.jpg");
         recipeRepository.save(bananaPbOats);
         bananaPbOats.addIngredient(oats);
         bananaPbOats.addIngredient(banana);
@@ -191,7 +191,7 @@ public class DataLoader implements ApplicationRunner {
         pbBreakfastCookiesSteps.setStep5("Place the cookies on the baking sheet. Bake until the edges start to brown, 12 to 15 minutes.");
         stepsRepository.save(pbBreakfastCookiesSteps);
 
-        Recipe pbBreakfastCookies = new Recipe("Peanut Butter Breakfast Cookies", pbBreakfastCookiesSteps);
+        Recipe pbBreakfastCookies = new Recipe("Peanut Butter Breakfast Cookies", pbBreakfastCookiesSteps, "https://marisamoore.com/wp-content/uploads/2016/07/Breakfast-Cookies-3-Ingredient-Peanut-Butter-Oatmeal-Cookies.jpg");
         recipeRepository.save(pbBreakfastCookies);
         pbBreakfastCookies.addIngredient(banana);
         pbBreakfastCookies.addIngredient(egg);
@@ -230,7 +230,7 @@ public class DataLoader implements ApplicationRunner {
         chickenSataySaladSteps.setStep5("While the chicken rests, toss the lettuce wedges with the cucumber, onion, and pomegranate, and pile onto plates. Spoon over a little of the sauce. Slice teh chicken, pile on top of the salad and spoon over the remaining sauce.");
         stepsRepository.save(chickenSataySaladSteps);
 
-        Recipe chickenSataySalad = new Recipe("Chicken Satay Salad", chickenSataySaladSteps);
+        Recipe chickenSataySalad = new Recipe("Chicken Satay Salad", chickenSataySaladSteps, "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-satay-salad-8f5b068.jpg?quality=90&webp=true&resize=300,272");
         recipeRepository.save(chickenSataySalad);
         chickenSataySalad.addIngredient(tamari);
         chickenSataySalad.addIngredient(curryPowder);
@@ -262,7 +262,7 @@ public class DataLoader implements ApplicationRunner {
         Steps avocadoAndStrawberrySmoothieSteps = new Steps("Put all the ingredients into a blender and whizz until smooth. If teh consistency is too thick, add a little water");
         stepsRepository.save(avocadoAndStrawberrySmoothieSteps);
 
-        Recipe avocadoAndStrawberrySmoothie = new Recipe("Avocado and Strawberry Smoothie", avocadoAndStrawberrySmoothieSteps);
+        Recipe avocadoAndStrawberrySmoothie = new Recipe("Avocado and Strawberry Smoothie", avocadoAndStrawberrySmoothieSteps, "https://www.peelwithzeal.com/wp-content/uploads/2021/01/strawberry-avocado-smoothie-recipe-plant-based.jpg");
         recipeRepository.save(avocadoAndStrawberrySmoothie);
         avocadoAndStrawberrySmoothie.addIngredient(avocado);
         avocadoAndStrawberrySmoothie.addIngredient(strawberries);
@@ -294,7 +294,7 @@ public class DataLoader implements ApplicationRunner {
         prawnAndHarissaSpaghettiSteps.setStep4("Toss the cooked spaghetti and pasta water through the prawns and harissa. Stir through the broccoli, season to taste and serve");
         stepsRepository.save(prawnAndHarissaSpaghettiSteps);
 
-        Recipe prawnAndHarissaSpaghetti = new Recipe("Prawn and Harissa Spaghetti", prawnAndHarissaSpaghettiSteps);
+        Recipe prawnAndHarissaSpaghetti = new Recipe("Prawn and Harissa Spaghetti", prawnAndHarissaSpaghettiSteps, "https://www.telegraph.co.uk/content/dam/recipes/2020/08/28/sun-angela_1_trans_NvBQzQNjv4BqCM7LU2_bB37TtH8rnoO67rdzV2XcPKDLkZETSpG1-4U.jpg?imwidth=960");
         recipeRepository.save(prawnAndHarissaSpaghetti);
         prawnAndHarissaSpaghetti.addIngredient(longStemBroccoli);
         prawnAndHarissaSpaghetti.addIngredient(spaghetti);
@@ -312,7 +312,7 @@ public class DataLoader implements ApplicationRunner {
         easyBakedAppleChipsSteps.setStep3("Place the baking sheet into the oven and bake for 45 minutes or until crisp and golden. Allow to cool before serving.");
         stepsRepository.save(easyBakedAppleChipsSteps);
 
-        Recipe easyBakedAppleChips = new Recipe("Easy Baked Apple Chips", easyBakedAppleChipsSteps);
+        Recipe easyBakedAppleChips = new Recipe("Easy Baked Apple Chips", easyBakedAppleChipsSteps, "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/10/Apple-Chips-3.jpg");
         recipeRepository.save(easyBakedAppleChips);
         easyBakedAppleChips.addIngredient(apple);
         easyBakedAppleChips.addIngredient(cinnamon);
@@ -325,7 +325,7 @@ public class DataLoader implements ApplicationRunner {
         kingPrawnRisottoSteps.setStep4("Once cooked, add the pasta to the pan and stir together. Season with salt and pepper to taste. Serve hot");
         stepsRepository.save(kingPrawnRisottoSteps);
 
-        Recipe kingPrawnRisotto = new Recipe("King Prawn Risotto", kingPrawnRisottoSteps);
+        Recipe kingPrawnRisotto = new Recipe("King Prawn Risotto", kingPrawnRisottoSteps, "http://thetalentzone.co.uk/musictv/wp-content/uploads/2015/12/lemon-resitto.png");
         recipeRepository.save(kingPrawnRisotto);
         kingPrawnRisotto.addIngredient(kingPrawns);
         kingPrawnRisotto.addIngredient(oliveOil);
@@ -337,7 +337,7 @@ public class DataLoader implements ApplicationRunner {
         stepsRepository.save(eggAndBaconSteps);
         eggAndBaconSteps.setStep2("Fry the egg in the same pan. Season with salt and pepper, add a little water and cover to steam. Serve hot.");
 
-        Recipe eggAndBacon = new Recipe("Egg and Bacon", eggAndBaconSteps);
+        Recipe eggAndBacon = new Recipe("Egg and Bacon", eggAndBaconSteps, "http://www.theyummymummyclub.com/wp-content/uploads/2018/08/thA1ACDSJV.jpg");
         recipeRepository.save(eggAndBacon);
         eggAndBacon.addIngredient(egg);
         eggAndBacon.addIngredient(bacon);
@@ -350,7 +350,7 @@ public class DataLoader implements ApplicationRunner {
         bltSaladSteps.setStep4("Season with salt and pepper to taste. Serve with a squeeze of lime.");
         stepsRepository.save(bltSaladSteps);
 
-        Recipe bltSalad = new Recipe("BLT Salad", bltSaladSteps);
+        Recipe bltSalad = new Recipe("BLT Salad", bltSaladSteps, "https://www.myketokitchen.com/wp-content/uploads/2020/01/Keto-BLT-Salad.jpg");
         recipeRepository.save(bltSalad);
         bltSalad.addIngredient(littleGemLettuce);
         bltSalad.addIngredient(cherryTomatoes);
@@ -366,7 +366,7 @@ public class DataLoader implements ApplicationRunner {
         cheeseAndSpinachStuffedMushroomsSteps.setStep4("Place on a lined baking sheet and into the oven at 200F for 15-20 minutes. Serve Hot");
         stepsRepository.save(cheeseAndSpinachStuffedMushroomsSteps);
 
-        Recipe cheeseAndSpinachStuffedMushrooms = new Recipe("Cheese And Spinach Stuffed Mushrooms", cheeseAndSpinachStuffedMushroomsSteps);
+        Recipe cheeseAndSpinachStuffedMushrooms = new Recipe("Cheese And Spinach Stuffed Mushrooms", cheeseAndSpinachStuffedMushroomsSteps, "https://hips.hearstapps.com/hmg-prod/images/stuffed-mushrooms-vertical-jpg-1525207616.jpg?crop=1.00xw:0.667xh;0,0.215xh&resize=480:*");
         recipeRepository.save(cheeseAndSpinachStuffedMushrooms);
         cheeseAndSpinachStuffedMushrooms.addIngredient(portobelloMushroom);
         cheeseAndSpinachStuffedMushrooms.addIngredient(spinach);

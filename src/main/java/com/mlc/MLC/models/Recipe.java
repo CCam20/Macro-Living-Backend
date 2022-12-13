@@ -41,12 +41,18 @@ public class Recipe {
     @JoinColumn(name="user_id")
     private User user;
 
-    public Recipe(String name, Steps steps) {
+    @Column(name="img_url")
+    private String imgUrl;
+
+
+
+    public Recipe(String name, Steps steps, String imgUrl) {
         this.name = name;
         this.ingredients = new ArrayList<>();
         this.steps = steps;
         this.favourite = false;
         this.mealPlan = false;
+        this.imgUrl = imgUrl;
     }
 
     public Recipe(){}
@@ -172,5 +178,13 @@ public class Recipe {
 
     public void setMealPlan(boolean mealPlan) {
         this.mealPlan = mealPlan;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }
