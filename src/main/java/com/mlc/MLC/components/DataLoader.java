@@ -38,11 +38,11 @@ public class DataLoader implements ApplicationRunner {
         userRepository.save(user1);
 
         // BACsalad data (NOT FINAL)
-        Ingredient bacon = new Ingredient("Bacon",37, 0,41,0,false,false, "2 slices of", 200.0);
+        Ingredient bacon = new Ingredient("Bacon",5, 0,7,0,false,false, "2 slices of", 80.0);
         ingredientRepository.save(bacon);
         Ingredient apple = new Ingredient("Apple", 0, 13, 0 , 2, true, true , "1", 75.0);
         ingredientRepository.save(apple);
-        Ingredient cashews = new Ingredient("Cashews", 18, 27, 44, 3, true, true, "20g", 125.0);
+        Ingredient cashews = new Ingredient("Cashews", 3.3, 6, 8.7, 0.7, true, true, "20g", 113.0);
         ingredientRepository.save(cashews);
 
         Steps bacSaladSteps = new Steps("");
@@ -305,6 +305,75 @@ public class DataLoader implements ApplicationRunner {
         prawnAndHarissaSpaghetti.addIngredient(harissaPaste);
         prawnAndHarissaSpaghetti.addIngredient(lemonZest);
         recipeRepository.save(prawnAndHarissaSpaghetti);
+
+        Steps easyBakedAppleChipsSteps = new Steps("Preheat oven to 225F and line a large baking sheet with parchment paper. Remove the apples core and slice each into thin rings or slices.");
+        stepsRepository.save(easyBakedAppleChipsSteps);
+        easyBakedAppleChipsSteps.setStep2("Place the apple slices in an even layer onto the baking sheet and sprinkle with cinnamon. Make sure the slices aren't crowded - this cause them to steam and they won't turn crispy.");
+        easyBakedAppleChipsSteps.setStep3("Place the baking sheet into the oven and bake for 45 minutes or until crisp and golden. Allow to cool before serving.");
+        stepsRepository.save(easyBakedAppleChipsSteps);
+
+        Recipe easyBakedAppleChips = new Recipe("Easy Baked Apple Chips", easyBakedAppleChipsSteps);
+        recipeRepository.save(easyBakedAppleChips);
+        easyBakedAppleChips.addIngredient(apple);
+        easyBakedAppleChips.addIngredient(cinnamon);
+        recipeRepository.save(easyBakedAppleChips);
+
+        Steps kingPrawnRisottoSteps = new Steps("Boil a pot of water and cook the pasta for 10 minutes.");
+        stepsRepository.save(kingPrawnRisottoSteps);
+        kingPrawnRisottoSteps.setStep2("While the pasta is cooking, heat the olive oil in a pan and brown the prawns for 2 minutes on each side.");
+        kingPrawnRisottoSteps.setStep3("Add the milk and parmesan cheese to the pan and stir until thickened.");
+        kingPrawnRisottoSteps.setStep4("Once cooked, add the pasta to the pan and stir together. Season with salt and pepper to taste. Serve hot");
+        stepsRepository.save(kingPrawnRisottoSteps);
+
+        Recipe kingPrawnRisotto = new Recipe("King Prawn Risotto", kingPrawnRisottoSteps);
+        recipeRepository.save(kingPrawnRisotto);
+        kingPrawnRisotto.addIngredient(kingPrawns);
+        kingPrawnRisotto.addIngredient(oliveOil);
+        kingPrawnRisotto.addIngredient(skimmedMilk);
+        kingPrawnRisotto.addIngredient(parmesanCheese);
+        recipeRepository.save(kingPrawnRisotto);
+
+        Steps eggAndBaconSteps = new Steps("Fry bacon in a pan until crispy.");
+        stepsRepository.save(eggAndBaconSteps);
+        eggAndBaconSteps.setStep2("Fry the egg in the same pan. Season with salt and pepper, add a little water and cover to steam. Serve hot.");
+
+        Recipe eggAndBacon = new Recipe("Egg and Bacon", eggAndBaconSteps);
+        recipeRepository.save(eggAndBacon);
+        eggAndBacon.addIngredient(egg);
+        eggAndBacon.addIngredient(bacon);
+        recipeRepository.save(eggAndBacon);
+
+        Steps bltSaladSteps = new Steps("Fry bacon in a pan until crispy.");
+        stepsRepository.save(bltSaladSteps);
+        bltSaladSteps.setStep2("Chop the lettuce and tomatoes and place in a bowl.");
+        bltSaladSteps.setStep3("Chop the bacon into bits and sprinkle over the lettuce and tomatoes. Drizzle with olive oil and toss.");
+        bltSaladSteps.setStep4("Season with salt and pepper to taste. Serve with a squeeze of lime.");
+        stepsRepository.save(bltSaladSteps);
+
+        Recipe bltSalad = new Recipe("BLT Salad", bltSaladSteps);
+        recipeRepository.save(bltSalad);
+        bltSalad.addIngredient(littleGemLettuce);
+        bltSalad.addIngredient(cherryTomatoes);
+        bltSalad.addIngredient(bacon);
+        bltSalad.addIngredient(oliveOil);
+        bltSalad.addIngredient(limeJuice);
+        recipeRepository.save(bltSalad);
+
+        Steps cheeseAndSpinachStuffedMushroomsSteps = new Steps("Add the olive oil and spinach to a hot pan and stir until wilted. Allow to cool");
+        stepsRepository.save(cheeseAndSpinachStuffedMushroomsSteps);
+        cheeseAndSpinachStuffedMushroomsSteps.setStep2("Mixed the spinach and Boursin in a bowl.");
+        cheeseAndSpinachStuffedMushroomsSteps.setStep3("Wash the mushrooms and stuff the whole mushrooms with the spinach and Boursin mixture. Sprinkle parmesan cheese on top and a little salt and pepper");
+        cheeseAndSpinachStuffedMushroomsSteps.setStep4("Place on a lined baking sheet and into the oven at 200F for 15-20 minutes. Serve Hot");
+        stepsRepository.save(cheeseAndSpinachStuffedMushroomsSteps);
+
+        Recipe cheeseAndSpinachStuffedMushrooms = new Recipe("Cheese And Spinach Stuffed Mushrooms", cheeseAndSpinachStuffedMushroomsSteps);
+        recipeRepository.save(cheeseAndSpinachStuffedMushrooms);
+        cheeseAndSpinachStuffedMushrooms.addIngredient(portobelloMushroom);
+        cheeseAndSpinachStuffedMushrooms.addIngredient(spinach);
+        cheeseAndSpinachStuffedMushrooms.addIngredient(boursin);
+        cheeseAndSpinachStuffedMushrooms.addIngredient(oliveOil);
+        cheeseAndSpinachStuffedMushrooms.addIngredient(parmesanCheese);
+        recipeRepository.save(cheeseAndSpinachStuffedMushrooms);
 
 
 
