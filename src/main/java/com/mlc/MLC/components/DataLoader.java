@@ -337,7 +337,7 @@ public class DataLoader implements ApplicationRunner {
         stepsRepository.save(eggAndBaconSteps);
         eggAndBaconSteps.setStep2("Fry the egg in the same pan. Season with salt and pepper, add a little water and cover to steam. Serve hot.");
 
-        Recipe eggAndBacon = new Recipe("Egg and Bacon", eggAndBaconSteps, "http://www.theyummymummyclub.com/wp-content/uploads/2018/08/thA1ACDSJV.jpg");
+        Recipe eggAndBacon = new Recipe("Egg and Bacon", eggAndBaconSteps, "https://www.dishbydish.net/wp-content/uploads/Air-Fryer-Bacon-Gluten-Free-Dairy-Free_Final3-scaled.webp");
         recipeRepository.save(eggAndBacon);
         eggAndBacon.addIngredient(egg);
         eggAndBacon.addIngredient(bacon);
