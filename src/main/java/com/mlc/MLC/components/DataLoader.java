@@ -375,6 +375,93 @@ public class DataLoader implements ApplicationRunner {
         cheeseAndSpinachStuffedMushrooms.addIngredient(parmesanCheese);
         recipeRepository.save(cheeseAndSpinachStuffedMushrooms);
 
+        //Added by Matt 13.12.22
+
+        Steps spaghettiCarbonaraSteps = new Steps("In a small bowl, whisk the egg until well beaten. Mince the garlic, boil the water, chop the bacon and grate the cheese");
+        stepsRepository.save(spaghettiCarbonaraSteps);
+        spaghettiCarbonaraSteps.setStep2("Cook the pasta until al dente. Reserve some of the cooking water. Drain and toss with olive oil and keep warm.");
+        spaghettiCarbonaraSteps.setStep3("Cook the bacon in a large pan until crispy, remove and drain on paper towels");
+        spaghettiCarbonaraSteps.setStep4("Using the bacon fat in the pan, brown the onions and garlic. Return the bacon to the pan and add the pasta. Toss to combine, adding some of the reserve water if it seems dry.");
+        spaghettiCarbonaraSteps.setStep5("Add the egg and toss with tongs until the pasta is coated. Add the cheese and repeat. Season with salt and pepper to taste then serve hot.");
+        stepsRepository.save(spaghettiCarbonaraSteps);
+
+        Recipe spaghettiCarbonara = new Recipe("Spaghetti Carbonara", spaghettiCarbonaraSteps, "https://www.kyleecooks.com/wp-content/uploads/2017/03/Spaghetti-Carbonara-22-1024x683.jpg");
+        recipeRepository.save(spaghettiCarbonara);
+        spaghettiCarbonara.addIngredient(bacon);
+        spaghettiCarbonara.addIngredient(egg);
+        spaghettiCarbonara.addIngredient(parmesanCheese);
+        spaghettiCarbonara.addIngredient(spaghetti);
+        spaghettiCarbonara.addIngredient(onion);
+        spaghettiCarbonara.addIngredient(garlic);
+        spaghettiCarbonara.addIngredient(oliveOil);
+        recipeRepository.save(spaghettiCarbonara);
+
+        Steps strawberryBananaSmoothieSteps = new Steps("Add all the ingredients into a blender with a cup of ice and blend until smooth. Serve cold.");
+        stepsRepository.save(strawberryBananaSmoothieSteps);
+
+        Recipe strawberryBananaSmoothie = new Recipe("Strawberry Banana Smoothie", strawberryBananaSmoothieSteps, "https://www.simplyscratch.com/wp-content/uploads/2011/03/5560399194_653b3c0b3c_o-620x414.jpg");
+        recipeRepository.save(strawberryBananaSmoothie);
+        strawberryBananaSmoothie.addIngredient(skimmedMilk);
+        strawberryBananaSmoothie.addIngredient(strawberries);
+        strawberryBananaSmoothie.addIngredient(banana);
+        strawberryBananaSmoothie.addIngredient(yoghurt);
+        strawberryBananaSmoothie.addIngredient(honey);
+        strawberryBananaSmoothie.addIngredient(cinnamon);
+        recipeRepository.save(strawberryBananaSmoothie);
+
+        Steps cauliflowerBreakfastSkilletSteps = new Steps("Fry bacon in a skillet until crispy. Transfer to a plate to drain, then chop.");
+        stepsRepository.save(cauliflowerBreakfastSkilletSteps);
+        cauliflowerBreakfastSkilletSteps.setStep2("Chop the cauliflower into small chunks, dice the garlic and onion. Add these to the skillet with the bacon grease and cook for 5 minutes.");
+        cauliflowerBreakfastSkilletSteps.setStep3("Make a well with a spoon and crack in the egg. Season with salt and pepper. Place the lid on the skillet and cook until the eggs set. About 3 minutes.");
+        cauliflowerBreakfastSkilletSteps.setStep4("Sprinkle the diced bacon over the top and serve immediately.");
+        stepsRepository.save(cauliflowerBreakfastSkilletSteps);
+
+        Recipe cauliflowerBreakfastSkillet = new Recipe("Cauliflower Breakfast Skillet", cauliflowerBreakfastSkilletSteps, "https://www.loveandzest.com/wp-content/uploads/2017/02/Cauliflower-Breakfast-Skillet-Casserole-11-768x1152.jpg");
+        recipeRepository.save(cauliflowerBreakfastSkillet);
+        cauliflowerBreakfastSkillet.addIngredient(bacon);
+        cauliflowerBreakfastSkillet.addIngredient(cauliflower);
+        cauliflowerBreakfastSkillet.addIngredient(garlic);
+        cauliflowerBreakfastSkillet.addIngredient(onion);
+        cauliflowerBreakfastSkillet.addIngredient(egg);
+        recipeRepository.save(cauliflowerBreakfastSkillet);
+
+        Steps easyBananaPancakesSteps = new Steps("In a bowl combine the banana, egg and cinnamon. Mix/mash until smooth. Use a fork to make this easier.");
+        stepsRepository.save(easyBananaPancakesSteps);
+        easyBananaPancakesSteps.setStep2("Heat a pan under medium heat. Once hot pour two tablespoons of the batter into the pan and cook for 90 seconds each side or until ready. Serve hot or cold.");
+        stepsRepository.save(easyBananaPancakesSteps);
+
+        Recipe easyBananaPancakes = new Recipe("Easy Banana Pancakes", easyBananaPancakesSteps, "https://1.bp.blogspot.com/-y0wv6Pka_WM/WL6u-Gq93KI/AAAAAAAAFCM/RoffTFkVqQMFdOT7waNK2hTs41zk3hNrACLcB/s1600/1.jpg");
+        recipeRepository.save(easyBananaPancakes);
+        easyBananaPancakes.addIngredient(banana);
+        easyBananaPancakes.addIngredient(cinnamon);
+        easyBananaPancakes.addIngredient(egg);
+        recipeRepository.save(easyBananaPancakes);
+
+        Steps butternutSquashAndCurrySoupSteps = new Steps("Peel and chop the squash and onion. Coat in a pan with olive oil, salt and pepper. Place in a 220F oven for 30-40 minutes.");
+        stepsRepository.save(butternutSquashAndCurrySoupSteps);
+        butternutSquashAndCurrySoupSteps.setStep2("Remove from the oven and blend until smooth. Add to a pot with the stock, curry powder and 700ml boiling water.");
+        butternutSquashAndCurrySoupSteps.setStep3("Bring to a boil and warm through. Serve hot.");
+        stepsRepository.save(butternutSquashAndCurrySoupSteps);
+
+        Recipe butternutSquashAndCurrySoup = new Recipe("Butternut Squash and Curry Soup", butternutSquashAndCurrySoupSteps, "https://cookieandkate.com/images/2019/10/best-butternut-squash-soup-recipe-2-768x1154.jpg");
+        recipeRepository.save(butternutSquashAndCurrySoup);
+        butternutSquashAndCurrySoup.addIngredient(squash);
+        butternutSquashAndCurrySoup.addIngredient(oliveOil);
+        butternutSquashAndCurrySoup.addIngredient(onion);
+        butternutSquashAndCurrySoup.addIngredient(vegetableStockCube);
+        butternutSquashAndCurrySoup.addIngredient(curryPowder);
+        recipeRepository.save(butternutSquashAndCurrySoup);
+
+        Steps applePieSmoothieSteps = new Steps("Place all the ingredients in a blender with a cup of ice and blend until smooth. Serve cold.");
+        stepsRepository.save(applePieSmoothieSteps);
+
+        Recipe applePieSmoothie = new Recipe("Apple Pie Smoothie", applePieSmoothieSteps, "https://www.acouplecooks.com/wp-content/uploads/2020/09/Apple-Smoothie-007.jpg");
+        recipeRepository.save(applePieSmoothie);
+        applePieSmoothie.addIngredient(apple);
+        applePieSmoothie.addIngredient(cinnamon);
+        applePieSmoothie.addIngredient(honey);
+        recipeRepository.save(applePieSmoothie);
+
 
 
 
