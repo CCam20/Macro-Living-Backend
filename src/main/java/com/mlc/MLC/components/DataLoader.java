@@ -48,7 +48,12 @@ public class DataLoader implements ApplicationRunner {
         Steps bacSaladSteps = new Steps("");
         stepsRepository.save(bacSaladSteps);
         bacSaladSteps.setStep1("Chop apple");
+        bacSaladSteps.setStep2("Cook and chop bacon");
+        bacSaladSteps.setStep3("Weigh out cashews");
+        bacSaladSteps.setStep4("Add all ingredients to bowl");
+        bacSaladSteps.setStep5("Tell yourself its healthy because it has salad in the name ");
         stepsRepository.save(bacSaladSteps);
+
 
         Recipe bacSalad = new Recipe("BAC Salad", bacSaladSteps, "https://www.recipegirl.com/wp-content/uploads/2007/11/Apple-Bacon-Salad-Recipe.jpg");
         recipeRepository.save(bacSalad);
@@ -80,6 +85,12 @@ public class DataLoader implements ApplicationRunner {
         stepsRepository.save(portobelloMushroomAndSquashRisottoSteps);
         portobelloMushroomAndSquashRisottoSteps.setStep2("In a large pot add two teaspoons of olive oil");
         portobelloMushroomAndSquashRisottoSteps.setStep3("Add the onions to the pot");
+        portobelloMushroomAndSquashRisottoSteps.setStep4("Fry onions till they soften, while they soften half the squash and place in a steamer. Cover and steam for 10 min");
+        portobelloMushroomAndSquashRisottoSteps.setStep5("When the squash is tender, remove and let cool. Once colled scoop out flesh with a spoon and mash");
+        portobelloMushroomAndSquashRisottoSteps.setStep6("To the onions add the barley, white wine and thyme and stir then add the stock and raise the heat to high. Once boiling reduce the heat, cover and let cook for 30 mins. Then stir in teh squash and simmer until think and creamy");
+        portobelloMushroomAndSquashRisottoSteps.setStep7("Stir in lemon and parmesan and remove from the heat");
+        portobelloMushroomAndSquashRisottoSteps.setStep8("Heat a large pan with a drizzle of olive oil, place in teh mushroom slices and cook for 3-4 min or until browned");
+        portobelloMushroomAndSquashRisottoSteps.setStep9("Serve risotto with mushrooms arranged on top");
         stepsRepository.save(portobelloMushroomAndSquashRisottoSteps);
 
         Recipe portobelloMushroomAndSquashRisotto = new Recipe("Portobello Mushroom And Squash Risotto", portobelloMushroomAndSquashRisottoSteps, "https://blog.myfitnesspal.com/wp-content/uploads/2018/08/Seared-Portobello-Mushroom-and-Squash-Barley-Risotto.jpg");
